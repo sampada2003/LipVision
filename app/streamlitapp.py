@@ -51,10 +51,10 @@ if uploaded_video is not None:
 
 
     with col2: 
-        st.info('This is all the machine learning model sees when making a prediction')
+        # st.info('This is all the machine learning model sees when making a prediction')
         video = load_data_test(tf.convert_to_tensor(file_path))
-        imageio.mimsave('animation.gif', video, fps=10)
-        st.image('animation.gif',width=380) 
+        # imageio.mimsave('animation.gif', video, fps=10)
+        # st.image('animation.gif',width=380) 
         video = tf.expand_dims(video, axis=0)  # Add batch dimension
         video = tf.expand_dims(video, axis=-1)
         st.info('This is the output of the machine learning model as tokens')
@@ -89,10 +89,10 @@ else:
 
 
         with col2: 
-            st.info('This is all the machine learning model sees when making a prediction')
+            # st.info('This is all the machine learning model sees when making a prediction')
             video = load_data_test(tf.convert_to_tensor(file_path))
-            imageio.mimsave('animation.gif', video, fps=10)
-            st.image('animation.gif', width=377) 
+            # imageio.mimsave('animation.gif', video, fps=10)
+            # st.image('animation.gif', width=377) 
 
             st.info('This is the output of the machine learning model as tokens')
             model = load_model()
